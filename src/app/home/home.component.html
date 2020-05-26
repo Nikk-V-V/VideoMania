@@ -1,0 +1,38 @@
+<h1 class="title">
+  Жанри
+</h1>
+<div *ngIf="ganre.genres" class="genres d-flex j-c-c a-i-c">
+  <button (click)="arrow(-480)" class="arr_left arrow d-flex">
+    <i class="fas fa-arrow-alt-circle-left"></i>
+  </button>
+  <div class="genres_container">
+    <div id="road" class="d-flex road">
+      <a routerLink="/genre/{{g.id}}" *ngFor="let g of ganre.genres" class="genre d-flex a-i-c">
+        <div class="genre_image">
+          <img content-type="image" [src]="g.image" alt="image">
+        </div>
+        <div class="genre_title" [innerHTML]="g.title">
+
+        </div>
+      </a>
+    </div>
+  </div>
+  <button (click)="arrow(480)" class="arr_right arrow d-flex">
+    <i class="fas fa-arrow-alt-circle-right"></i>
+  </button>
+</div>
+
+
+<div *ngIf="film.films" class="films">
+  <h1 class="title">Популярні</h1>
+  <div class="films_container d-flex j-c-a">
+    <a routerLink="/film/{{f.id}}" *ngFor="let f of film.films" class="film">
+      <div class="film_image">
+        <img [src]="f.image" alt="">
+      </div>
+      <div class="film_title" [innerHTML]="f.title">
+
+      </div>
+    </a>
+  </div>
+</div>

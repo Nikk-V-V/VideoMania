@@ -1,0 +1,14 @@
+<section class="film d-flex">
+  <div class="image d-flex">
+    <img [src]="filme?.image" alt="">
+  </div>
+  <div class="title" [innerHTML]="filme?.title">
+
+  </div>
+  <div class="video">
+    <video [src]="filme?.video" controls></video>
+  </div>
+  <div class="description" [innerHTML]="filme?.description">
+
+  </div>
+</section>

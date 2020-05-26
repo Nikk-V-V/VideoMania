@@ -1,0 +1,19 @@
+<section class="genres">
+  <div *ngIf="films">
+    <div class="films_container d-flex j-c-a">
+      <a routerLink="/film/{{f?.id}}" *ngFor="let f of films" class="film">
+        <div class="film_image">
+          <img [src]="f?.image" alt="">
+        </div>
+        <div class="film_title" [innerHTML]="f?.title">
+
+        </div>
+      </a>
+    </div>
+  </div>
+  <div *ngIf="!films[0]" class="films d-flex j-c-c a-i-c">
+    <div class="message">
+      Фільмів цього жанру не найдено
+    </div>
+  </div>
+</section>

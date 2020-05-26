@@ -1,0 +1,38 @@
+.films_container {
+  flex-wrap: wrap;
+}
+
+.film {
+  min-height: 100vh;
+  margin: 1rem 1rem;
+  text-align: center;
+  padding: .7rem;
+  overflow: hidden;
+  border-radius: 25px;
+  background-color: #000000d1;
+  cursor: pointer;
+  width: 150px;
+  border: 2px solid #00696e;
+  .film_image {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 25px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .film_title {
+    margin: 1rem 0;
+    font-size: .7rem;
+  }
+}
+
+.message {
+  font-size: 3rem;
+  font-weight: bold;
+}
+.films {
+  min-height: 100vh;
+}
